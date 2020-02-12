@@ -1,0 +1,248 @@
+@import url(normalize.css);
+*:focus {
+  outline: #3dc9b3 thin dotted; }
+
+body {
+  color: #8c9398;
+  background-color: #fff;
+  overflow-x: hidden;
+  min-height: 100%; }
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+.svg-sprite {
+  display: none; }
+
+.wr-hero {
+  position: relative;
+  background-image: url("../assets/images/hero.jpeg");
+  background-size: cover;
+  height: 100vh; }
+  .wr-hero .container {
+    position: relative; }
+    .wr-hero .container .logo {
+      margin-bottom: 200px; }
+    .wr-hero .container .menu.active .bars {
+      display: none; }
+    .wr-hero .container .bars {
+      position: absolute;
+      right: 20px;
+      top: 60px;
+      color: #353535; }
+    .wr-hero .container .bars:hover {
+      cursor: pointer;
+      fill: #3dc9b3; }
+    .wr-hero .container .times:hover {
+      cursor: pointer;
+      fill: #3dc9b3; }
+    .wr-hero .container .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .wr-hero .container .hero h1 {
+        font-size: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 3px;
+        line-height: 1,5;
+        margin-bottom: 40px; }
+      .wr-hero .container .hero .description {
+        font-size: 25px;
+        color: #fff;
+        margin-bottom: 90px;
+        width: 600px;
+        text-align: center; }
+      .wr-hero .container .hero .button {
+        border: 1px solid #fff;
+        padding: 17px;
+        color: #fff;
+        letter-spacing: 1px; }
+      .wr-hero .container .hero .button:hover {
+        background-color: #29ad97; }
+      .wr-hero .container .hero .button:active {
+        background-color: #309383;
+        box-shadow: none;
+        border-color: #309383; }
+  .wr-hero::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #242830;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+  .wr-hero header {
+    display: none; }
+    .wr-hero header.active {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      background-color: #242830; }
+    .wr-hero header .times {
+      display: inline-block;
+      position: absolute;
+      right: 210px;
+      top: 57px;
+      fill: #fff; }
+    .wr-hero header .navigation .nav-bar {
+      padding-top: 200px; }
+      .wr-hero header .navigation .nav-bar li {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 30px; }
+        .wr-hero header .navigation .nav-bar li a {
+          font-size: 25px;
+          text-transform: uppercase;
+          color: #3dc9b3; }
+          .wr-hero header .navigation .nav-bar li a:hover {
+            color: #fff; }
+
+.wr-intro {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-intro .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .wr-intro .container p {
+      text-align: center;
+      font-size: 20px;
+      line-height: 1,5; }
+
+h2 {
+  position: relative;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #353535;
+  margin-bottom: 35px; }
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 40%;
+  bottom: -26px;
+  width: 70px;
+  height: 10px;
+  border-bottom: 2px solid #3dc9b3; }
+
+.wr-statistics {
+  padding-top: 90px;
+  padding-bottom: 90px; }
+  .wr-statistics .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .wr-statistics .container .statistics {
+      font-size: 40px; }
+      .wr-statistics .container .statistics span {
+        font-size: 58px; }
+
+.wr-first-argument {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-first-argument .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .wr-first-argument .container img {
+      width: 500px;
+      height: auto; }
+    .wr-first-argument .container .first-argument {
+      padding-left: 100px; }
+      .wr-first-argument .container .first-argument p {
+        font-size: 20px; }
+
+.wr-second-argument {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-second-argument .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .wr-second-argument .container img {
+      width: 500px;
+      height: auto; }
+    .wr-second-argument .container .second-argument {
+      padding-right: 100px; }
+      .wr-second-argument .container .second-argument p {
+        font-size: 20px; }
+
+.wr-third-argument {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-third-argument .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .wr-third-argument .container img {
+      width: 500px;
+      height: auto; }
+    .wr-third-argument .container .third-argument {
+      padding-left: 100px; }
+      .wr-third-argument .container .third-argument p {
+        font-size: 20px; }
+
+.wr-quote {
+  position: relative;
+  background-image: url("../assets/images/quote.jpeg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-quote .container {
+    text-align: center;
+    position: relative; }
+    .wr-quote .container h3 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 40px;
+      letter-spacing: 5px;
+      margin-bottom: 36px; }
+  .wr-quote::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #242830;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+.wr-mission {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-mission .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .wr-mission .container p {
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.5; }
