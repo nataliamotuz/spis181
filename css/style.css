@@ -1,6 +1,6 @@
 @import url(normalize.css);
 *:focus {
-  outline: #3dc9b3 thin dotted; }
+  outline: #05AA94 thin dotted; }
 
 body {
   color: #8c9398;
@@ -39,10 +39,10 @@ a {
       color: #353535; }
     .wr-hero .container .bars:hover {
       cursor: pointer;
-      fill: #3dc9b3; }
+      fill: #05AA94; }
     .wr-hero .container .times:hover {
       cursor: pointer;
-      fill: #3dc9b3; }
+      fill: #05AA94; }
     .wr-hero .container .hero {
       display: flex;
       flex-direction: column;
@@ -109,7 +109,7 @@ a {
         .wr-hero header .navigation .nav-bar li a {
           font-size: 25px;
           text-transform: uppercase;
-          color: #3dc9b3; }
+          color: #05AA94; }
           .wr-hero header .navigation .nav-bar li a:hover {
             color: #fff; }
 
@@ -124,7 +124,7 @@ a {
     .wr-intro .container p {
       text-align: center;
       font-size: 20px;
-      line-height: 1,5; }
+      line-height: 1.5; }
 
 h2 {
   position: relative;
@@ -132,30 +132,34 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
-  color: #353535;
-  margin-bottom: 35px; }
+  color: #015398;
+  margin-bottom: 40px; }
 
 h2::before {
   content: '';
   position: absolute;
-  left: 40%;
-  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
   width: 70px;
   height: 10px;
-  border-bottom: 2px solid #3dc9b3; }
+  border-bottom: 2px solid #353535; }
 
 .wr-statistics {
   padding-top: 90px;
-  padding-bottom: 90px; }
+  padding-bottom: 90px;
+  background-color: #f3f5f8; }
   .wr-statistics .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; }
     .wr-statistics .container .statistics {
-      font-size: 40px; }
+      font-size: 40px;
+      color: #353535; }
       .wr-statistics .container .statistics span {
-        font-size: 58px; }
+        font-size: 58px;
+        color: #015398; }
 
 .wr-first-argument {
   padding-top: 50px;
@@ -163,7 +167,7 @@ h2::before {
   .wr-first-argument .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; }
     .wr-first-argument .container img {
       width: 500px;
@@ -171,7 +175,8 @@ h2::before {
     .wr-first-argument .container .first-argument {
       padding-left: 100px; }
       .wr-first-argument .container .first-argument p {
-        font-size: 20px; }
+        font-size: 22px;
+        line-height: 1.3; }
 
 .wr-second-argument {
   padding-top: 50px;
@@ -179,7 +184,7 @@ h2::before {
   .wr-second-argument .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; }
     .wr-second-argument .container img {
       width: 500px;
@@ -187,7 +192,8 @@ h2::before {
     .wr-second-argument .container .second-argument {
       padding-right: 100px; }
       .wr-second-argument .container .second-argument p {
-        font-size: 20px; }
+        font-size: 22px;
+        line-height: 1.3; }
 
 .wr-third-argument {
   padding-top: 50px;
@@ -195,7 +201,7 @@ h2::before {
   .wr-third-argument .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; }
     .wr-third-argument .container img {
       width: 500px;
@@ -203,7 +209,8 @@ h2::before {
     .wr-third-argument .container .third-argument {
       padding-left: 100px; }
       .wr-third-argument .container .third-argument p {
-        font-size: 20px; }
+        font-size: 22px;
+        line-height: 1.3; }
 
 .wr-quote {
   position: relative;
@@ -234,9 +241,36 @@ h2::before {
     height: 100%;
     width: 100%; }
 
+.wr-working-women {
+  padding-top: 90px;
+  padding-bottom: 90px; }
+  .wr-working-women .container {
+    text-align: center; }
+    .wr-working-women .container .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .wr-working-women .container .content .working-women-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 25px;
+        flex-basis: 100%;
+        font-size: 25px; }
+        .wr-working-women .container .content .working-women-content p:first-child {
+          color: #015398;
+          font-size: 35px;
+          font-weight: bold; }
+
 .wr-mission {
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  background-color: #f3f5f8; }
   .wr-mission .container {
     display: flex;
     flex-direction: column;
@@ -246,3 +280,24 @@ h2::before {
       text-align: center;
       font-size: 20px;
       line-height: 1.5; }
+
+.wr-about-ngo {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #242830; }
+  .wr-about-ngo .container .about-ngo-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .wr-about-ngo .container .about-ngo-content .content-ngo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 20px; }
+      .wr-about-ngo .container .about-ngo-content .content-ngo p:first-child {
+        text-transform: uppercase;
+        color: #015398;
+        font-size: 20px; }

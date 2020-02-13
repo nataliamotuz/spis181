@@ -9,7 +9,7 @@ $(document).ready(function () {
   });
 
   $('.counter').countUp({
-    time: 3000,
+    time: 2000,
     delay: 10
   });
 });
