@@ -1,6 +1,5 @@
 @import "normalize.css";
 
-
 // variables
 $color-dark: #353535;
 $color-light: #8c9398;
@@ -318,6 +317,60 @@ h2::before {
     }
 }
 
+// SLIDER DISCRIMINATION
+
+.wr-discrimination {
+    position: relative;
+    background-image: url('../assets/images/slider.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 110px;
+    & .container {
+        & h2 {
+            color: #fff;
+        }
+        & .slider {
+            & .slide {
+                padding: 30px;
+                & p {
+                    color: #fff;
+                    font-size: 20px;
+                    text-align: justify;
+                    
+                }
+                & p:first-child {
+                    font-size: 30px;
+                    text-align: center;
+                    
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                background-color: $bg-color-dark;
+                opacity: .5;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }   
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background-color: $bg-color-dark;
+            opacity: .3;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
 
 // QUOTE
 .wr-quote {

@@ -212,6 +212,46 @@ h2::before {
         font-size: 22px;
         line-height: 1.3; }
 
+.wr-discrimination {
+  position: relative;
+  background-image: url("../assets/images/slider.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 110px; }
+  .wr-discrimination .container h2 {
+    color: #fff; }
+  .wr-discrimination .container .slider .slide {
+    padding: 30px; }
+    .wr-discrimination .container .slider .slide p {
+      color: #fff;
+      font-size: 20px;
+      text-align: justify; }
+    .wr-discrimination .container .slider .slide p:first-child {
+      font-size: 30px;
+      text-align: center; }
+  .wr-discrimination .container .slider::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #242830;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+  .wr-discrimination .container::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #242830;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
 .wr-quote {
   position: relative;
   background-image: url("../assets/images/quote.jpeg");
