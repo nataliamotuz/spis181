@@ -28,11 +28,6 @@ $bg-color-dark: #242830;
 $bg-color-grey: #f3f5f8;
 $color-accent-green: #05AA94;
 $color-accent-blue: #015398;
-$color-accent-red: #EA5654;
-
-$mobile: 375px;
-$tablet: 1024px;
-
 
 $mobile: 375px;
 $tablet: 1024px;
@@ -58,7 +53,7 @@ $tablet: 1024px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-} 
+}
 
 *:focus {
     outline: $color-accent-green thin dotted;
@@ -117,7 +112,7 @@ a {
 
         .bars {
             position: absolute;
-            right: 20px;
+            right: 50px;
             top: 60px;
             fill: #fff;
         }
@@ -132,6 +127,18 @@ a {
             fill: $color-accent-green;
         }
 
+        // @media screen and (max-width: $tablet) {
+        //     @include flex-row();
+
+        //     & .bars {
+        //         left: unset;
+        //     }
+
+        //     & .times {
+        //         display: none;
+        //     }
+        // }
+
         & .hero {
             @include flex-column ();
 
@@ -139,11 +146,17 @@ a {
                 font-size: 50px;
                 text-transform: uppercase;
                 text-align: center;
-                color: $color-accent-green;
+                color: #fff;
                 letter-spacing: 3px;
                 line-height: 1.5;
                 margin-bottom: 40px;
                 margin-top: 220px;
+
+                @media screen and (max-width: $tablet) {
+                    font-size: 20px;
+                    padding: 10px 5px;
+                    margin-top: 120px;
+                }
             }
 
             & .description {
@@ -153,18 +166,43 @@ a {
                 margin-bottom: 90px;
                 width: 600px;
                 text-align: center;
+
+                @media screen and (max-width: $mobile) {
+                    width: 100%;
+                    font-size: 12px;
+                    margin-bottom: 40px;
+                }
+                @media screen and (max-width: $tablet) {
+                    width: 100%;
+                    font-size: 12px;
+                }
             }
 
             & .button {
-                border: 1px solid $color-accent-green;
+                border: 1px solid #fff;
+                border-radius: 3px;
                 padding: 17px;
-                color: $color-accent-green;
+                color: #fff;
                 letter-spacing: 1px;
+                background-color: $color-accent-green;
+                text-align: center;
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 15px;
+                    padding: 10px 5px;
+                }
+
+                @media screen and (max-width: $tablet) {
+                    font-size: 10px;
+                    padding: 10px 5px;
+                }
+
             }
 
             & .button:hover {
                 background-color: #29ad97;
-                color: #fff;
+                border-radius: 3px;
+                color: $bg-color-dark;
             }
 
             & .button:active {
@@ -172,6 +210,22 @@ a {
                 box-shadow: none;
                 border-color: #309383;
             }
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+
+                & h1 {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
         }
     }
 
@@ -229,7 +283,6 @@ a {
                     }
                 }
             }
-
         }
     }
 }
@@ -253,6 +306,14 @@ a {
         }
     }
 
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+
+        & p {
+            font-size: 15px;
+        }
+    }
+
 }
 
 h2 {
@@ -261,9 +322,12 @@ h2 {
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
-    // color: $color-dark;
     color: $color-accent-blue;
     margin-bottom: 40px;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 20px;
+    }
 }
 
 h2::before {
@@ -286,9 +350,16 @@ h2::before {
 
     & .container {
         display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media screen and (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
         & .statistics {
             font-size: 40px;
@@ -297,8 +368,43 @@ h2::before {
             & .counter {
                 font-size: 58px;
                 color: $color-accent-blue;
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 30px;
+                    padding-left: 20px;
+                }
+
+                @media screen and (max-width: $tablet) {
+                    font-size: 20px;
+                }
+            }
+
+            @media screen and (max-width: $tablet) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: $mobile) {
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
             }
         }
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
     }
 }
 
@@ -314,11 +420,29 @@ h2::before {
         & img {
             width: 500px;
             height: auto;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+            }
         }
 
         & .first-argument {
             padding-left: 100px;
             text-align: left;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+            }
+
+            @media screen and (max-width: $tablet) {
+                padding-left: 10px;
+            }
 
             & p {
                 font-size: 22px;
@@ -330,8 +454,33 @@ h2::before {
                     text-transform: uppercase;
 
                 }
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 18px;
+                }
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
             }
         }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            @include flex-column();
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+        }
+
+        @media screen and (max-width: $tablet) {
+            @include flex-column();
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -346,11 +495,29 @@ h2::before {
         & img {
             width: 500px;
             height: auto;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+            }
         }
 
         & .second-argument {
             padding-right: 100px;
             text-align: left;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+            }
+
+            @media screen and (max-width: $tablet) {
+                padding: 0;
+            }
 
             & p:first-child {
                 color: $color-accent-blue;
@@ -360,8 +527,30 @@ h2::before {
             & p {
                 font-size: 22px;
                 line-height: 1.3;
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 18px;
+                }
             }
+
         }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            @include flex-column();
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+        }
+
+        @media screen and (max-width: $tablet) {
+            @include flex-column();
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -376,11 +565,30 @@ h2::before {
         & img {
             width: 500px;
             height: auto;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+            }
         }
 
         & .third-argument {
             padding-left: 100px;
             text-align: left;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+            }
+
+            @media screen and (max-width: $tablet) {
+                padding: 0;
+            }
+
 
             & p:first-child {
                 color: $color-accent-blue;
@@ -390,8 +598,27 @@ h2::before {
             & p {
                 font-size: 22px;
                 line-height: 1.3;
+
+                @media screen and (max-width: $mobile) {
+                    font-size: 18px;
+                }
             }
         }
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            @include flex-column();
+
+        }
+
+        @media screen and (max-width: $tablet) {
+            @include flex-column();
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -454,10 +681,15 @@ h2::before {
             height: 100%;
             width: 100%;
         }
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+        }
     }
 
     & .slick-dotted.slick-slider {
         margin-bottom: 0;
+        border: 1px solid #fff;
     }
 
     @media screen and (max-width: $tablet) {
@@ -471,9 +703,9 @@ h2::before {
         width: 13px;
         height: 13px;
     }
-    
+
     .slick-dots li.slick-active button:before {
-        background-color: #000;
+        background-color: $color-accent-blue;
     }
 }
 
@@ -498,6 +730,10 @@ h2::before {
             font-size: 40px;
             letter-spacing: 5px;
             margin-bottom: 36px;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 20px;
+            }
         }
     }
 
@@ -510,6 +746,10 @@ h2::before {
         top: 0;
         left: 0;
         height: 100%;
+        width: 100%;
+    }
+
+    @media screen and (max-width: $mobile) {
         width: 100%;
     }
 }
@@ -542,6 +782,15 @@ h2::before {
                 }
 
             }
+
+            @media screen and (max-width: $mobile) {
+                @include flex-column();
+            }
+
+            @media screen and (max-width: $tablet) {
+                @include flex-column();
+                text-align: center;
+            }
         }
     }
 }
@@ -567,8 +816,8 @@ h2::before {
 // JOING
 
 .wr-join {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 65px;
+    padding-bottom: 65px;
     background-color: $color-accent-green;
 
     & .container {
@@ -580,6 +829,7 @@ h2::before {
             color: #fff;
             padding: 22px;
             border: 1px solid #fff;
+            border-radius: 3px;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: 0.5s;
@@ -587,11 +837,13 @@ h2::before {
             @media screen and (max-width: $mobile) {
                 font-size: 10px;
                 padding: 22px 32px 15px;
+                text-align: center;
             }
         }
 
         & a:hover {
             border: 1px solid $bg-color-dark;
+            border-radius: 3px;
             background-color: $bg-color-dark;
             transition: 0.5s;
             color: $color-accent-green;
@@ -640,6 +892,17 @@ h2::before {
                     font-size: 20px;
                 }
             }
+
+            @media screen and (max-width: $mobile) {
+                @include flex-column();
+                font-size: 10px;
+                text-align: center;
+            }
+
+            @media screen and (max-width: $tablet) {
+                @include flex-column();
+                text-align: center;
+            }
         }
 
         & .form {
@@ -653,6 +916,16 @@ h2::before {
 
             & h3::before {
                 display: none;
+            }
+
+            @media screen and (max-width: $mobile) {
+                @include flex-column();
+                text-align: center;
+            }
+
+            @media screen and (max-width: $tablet) {
+                @include flex-column();
+                text-align: center;
             }
         }
 
@@ -688,19 +961,27 @@ h2::before {
                 padding: 18px 18px;
                 border-radius: 1px;
                 margin: 0;
+                cursor: pointer;
 
                 @media screen and (max-width: $mobile) {
                     padding: 16px;
                 }
             }
+
             & button.button:hover {
                 color: #fff;
             }
         }
 
         @media screen and (max-width: $mobile) {
-            padding: 50px 0;
+            padding: 40px 0;
         }
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 

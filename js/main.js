@@ -14,27 +14,27 @@ $(document).ready(function () {
   });
 
   $('.slider').slick({
-    arrows: true,
+    arrows: false,
     dots: true,
     infinite: false,
     slidesToShow: 1,
-    // responsive: [
-    //   {
-    //     breakpoint: 1124,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       infinite: false,
-    //       dots: true
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 800,
-    //     settings: {
-    //       centerMode: true,
-    //       slidesToShow: 1,
-    //       centerPadding: 0,
-    //     }
-    //   },
-    // ]
+    responsive: [
+      {
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 2,
+          infinite: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          centerPadding: 0,
+        }
+      },
+    ]
   });
 });
