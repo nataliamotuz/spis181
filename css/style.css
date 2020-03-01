@@ -163,6 +163,9 @@ a {
       right: 210px;
       top: 57px;
       fill: #fff; }
+      @media screen and (max-width: 375px) {
+        .wr-hero header .times {
+          left: 50%; } }
     .wr-hero header .navigation .nav-bar {
       padding-top: 200px; }
       .wr-hero header .navigation .nav-bar li {
@@ -231,7 +234,6 @@ h2::before {
       .wr-statistics .container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center; } }
     .wr-statistics .container .statistics {
       font-size: 40px;
@@ -241,7 +243,7 @@ h2::before {
         color: #015398; }
         @media screen and (max-width: 375px) {
           .wr-statistics .container .statistics .counter {
-            font-size: 30px;
+            font-size: 25px;
             padding-left: 20px; } }
         @media screen and (max-width: 1024px) {
           .wr-statistics .container .statistics .counter {
@@ -487,14 +489,20 @@ h2::before {
   @media screen and (max-width: 1024px) {
     .wr-discrimination {
       width: 100%; } }
+  .wr-discrimination .slick-dots {
+    bottom: -50px; }
   .wr-discrimination .slick-dots li button:before {
     content: '';
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     border-radius: 100%;
     width: 13px;
     height: 13px; }
   .wr-discrimination .slick-dots li.slick-active button:before {
     background-color: #015398; }
+  .wr-discrimination .slick-arrow:before {
+    font-size: 40px; }
+  .wr-discrimination .slick-prev {
+    left: -45px; }
 
 .wr-quote {
   position: relative;
@@ -602,12 +610,12 @@ h2::before {
       border-radius: 3px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      transition: 0.5s; }
+      transition: 0.5s;
+      text-align: center; }
       @media screen and (max-width: 375px) {
         .wr-join .container a {
           font-size: 10px;
-          padding: 22px 32px 15px;
-          text-align: center; } }
+          padding: 22px 32px 15px; } }
     .wr-join .container a:hover {
       border: 1px solid #242830;
       border-radius: 3px;

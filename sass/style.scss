@@ -21,7 +21,7 @@
     font-style: normal;
 }
 
-// variables
+// variables 
 $color-dark: #353535;
 $color-light: #8c9398;
 $bg-color-dark: #242830;
@@ -261,6 +261,10 @@ a {
             right: 210px;
             top: 57px;
             fill: #fff;
+
+            @media screen and (max-width: $mobile) {
+               left: 50%; 
+            }
         }
 
         & .navigation {
@@ -357,7 +361,6 @@ h2::before {
         @media screen and (max-width: $mobile) {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
 
@@ -370,7 +373,7 @@ h2::before {
                 color: $color-accent-blue;
 
                 @media screen and (max-width: $mobile) {
-                    font-size: 30px;
+                    font-size: 25px;
                     padding-left: 20px;
                 }
 
@@ -696,9 +699,13 @@ h2::before {
         width: 100%;
     }
 
+    .slick-dots {
+        bottom: -50px;
+    }
+
     .slick-dots li button:before {
         content: '';
-        border: 2px solid #fff;
+        border: 3px solid #fff;
         border-radius: 100%;
         width: 13px;
         height: 13px;
@@ -706,6 +713,14 @@ h2::before {
 
     .slick-dots li.slick-active button:before {
         background-color: $color-accent-blue;
+    }
+
+    .slick-arrow:before {
+        font-size: 40px;
+    }
+
+    .slick-prev {
+        left: -45px
     }
 }
 
@@ -833,11 +848,11 @@ h2::before {
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: 0.5s;
+            text-align: center;
 
             @media screen and (max-width: $mobile) {
                 font-size: 10px;
                 padding: 22px 32px 15px;
-                text-align: center;
             }
         }
 

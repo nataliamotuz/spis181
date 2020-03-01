@@ -1,11 +1,24 @@
 $(document).ready(function () {
+  let active = false;
+  const toogleOverflow = () => {
+    console.log(active);
+    if (active) {
+      active = false;
+      $('body').css('overflow', 'auto');
+    } else {
+      active = true;
+      $('body').css('overflow', 'hidden');
+    }
+  }
 
   $('.menu').click(() => {
     $('header, .menu').toggleClass('active');
+    toogleOverflow();
   });
 
   $('header').click(() => {
     $('header, .menu').toggleClass('active');
+    toogleOverflow();
   });
 
   $('.counter').countUp({
@@ -14,7 +27,7 @@ $(document).ready(function () {
   });
 
   $('.slider').slick({
-    arrows: false,
+    arrows: true,
     dots: true,
     infinite: false,
     slidesToShow: 1,
@@ -25,6 +38,7 @@ $(document).ready(function () {
           slidesToShow: 2,
           infinite: false,
           dots: true,
+          arrows: true,
         }
       },
       {
@@ -33,6 +47,7 @@ $(document).ready(function () {
           centerMode: true,
           slidesToShow: 1,
           centerPadding: 0,
+          arrows: false,
         }
       },
     ]
