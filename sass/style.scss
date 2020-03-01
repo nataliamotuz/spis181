@@ -127,18 +127,6 @@ a {
             fill: $color-accent-green;
         }
 
-        // @media screen and (max-width: $tablet) {
-        //     @include flex-row();
-
-        //     & .bars {
-        //         left: unset;
-        //     }
-
-        //     & .times {
-        //         display: none;
-        //     }
-        // }
-
         & .hero {
             @include flex-column ();
 
